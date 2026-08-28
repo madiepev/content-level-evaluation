@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A sequential Skills Navigator career-path discovery simulation."
+    />
+    <title>Career pathways simulation</title>
+    <link rel="stylesheet" href="../shared-theme.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <main id="main">
+      <section id="intent-view" class="view intent-view" aria-labelledby="intent-title">
+        <div class="hero">
+          <h1 id="intent-title" tabindex="-1">Where do you want learning to take you?</h1>
+          <p>Choose the goal that best describes what you want to accomplish next.</p>
+        </div>
+
+        <div class="choice-grid intent-grid">
+          <button class="choice-card" type="button" data-intent="Build my foundation">
+            <span class="line-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="M5 25h22M8 25V14l8-7 8 7v11M13 25v-7h6v7" /></svg>
+            </span>
+            <span class="choice-copy">
+              <strong>Build my foundation</strong>
+              <small>Start with essential concepts and practical skills. No experience needed.</small>
+              <span class="card-action">Explore foundations <b aria-hidden="true">→</b></span>
+            </span>
+          </button>
+
+          <button class="choice-card featured-choice" type="button" data-intent="Advance my career">
+            <span class="line-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="m6 23 7-7 5 4 8-10M20 10h6v6" /></svg>
+            </span>
+            <span class="choice-copy">
+              <strong>Advance my career</strong>
+              <small>Build role-ready skills or prepare for a recognized Microsoft credential.</small>
+              <span class="card-action">Explore career paths <b aria-hidden="true">→</b></span>
+            </span>
+          </button>
+
+          <button class="choice-card" type="button" data-intent="Learn with my team">
+            <span class="line-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><circle cx="12" cy="12" r="4" /><circle cx="22" cy="14" r="3" /><path d="M5 25c.6-5 3-7 7-7s6.4 2 7 7M19 20c4-.6 6.6 1 7 5" /></svg>
+            </span>
+            <span class="choice-copy">
+              <strong>Learn with my team</strong>
+              <small>Build shared capability around the technologies and outcomes your team needs.</small>
+              <span class="card-action">Explore team paths <b aria-hidden="true">→</b></span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section id="route-view" class="view route-view" aria-labelledby="route-title" hidden>
+        <button class="back-button" type="button" data-back="intent"><span aria-hidden="true">←</span> Back</button>
+        <div class="page-heading">
+          <p id="selected-intent" class="eyebrow">Advance my career</p>
+          <h1 id="route-title" tabindex="-1">How would you like to move forward?</h1>
+          <p>Choose a structured path for a role or work toward a specific credential.</p>
+        </div>
+
+        <div class="choice-grid route-grid">
+          <button class="choice-card route-card" type="button" data-mode="roles">
+            <span class="line-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><path d="m6 23 7-7 5 4 8-10M20 10h6v6" /></svg>
+            </span>
+            <span class="choice-copy">
+              <strong>Explore role-based paths</strong>
+              <small>Follow curated learning that builds the skills required for a specific role.</small>
+              <ul>
+                <li>Progressive, role-specific learning</li>
+                <li>Practical projects and exercises</li>
+                <li>Skills that transfer to real work</li>
+              </ul>
+              <span class="card-action">View role-based paths <b aria-hidden="true">→</b></span>
+            </span>
+          </button>
+
+          <button class="choice-card route-card" type="button" data-mode="credentials">
+            <span class="line-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><circle cx="16" cy="12" r="7" /><path d="m12 18-2 10 6-3 6 3-2-10" /></svg>
+            </span>
+            <span class="choice-copy">
+              <strong>Work toward a credential</strong>
+              <small>Validate your expertise with Microsoft Certifications and Applied Skills.</small>
+              <ul>
+                <li>Official preparation resources</li>
+                <li>Assessment-aligned learning</li>
+                <li>Credentials you can share</li>
+              </ul>
+              <span class="card-action">View credentials <b aria-hidden="true">→</b></span>
+            </span>
+          </button>
+        </div>
+
+        <aside class="guidance">
+          <strong>Not sure which option is right?</strong>
+          <p>Start with a role-based path to build skills, then use a credential to validate what you know.</p>
+        </aside>
+      </section>
+
+      <section id="paths-view" class="view paths-view" aria-labelledby="paths-title" hidden>
+        <button class="back-button" type="button" data-back="route"><span aria-hidden="true">←</span> Back</button>
+        <div class="page-heading">
+          <p id="path-mode" class="eyebrow">Role-based learning</p>
+          <h1 id="paths-title" tabindex="-1">Choose your path</h1>
+          <p id="paths-description">Select the path that best matches the role you want to pursue.</p>
+        </div>
+
+        <div id="theme-list" class="theme-list"></div>
+      </section>
+    </main>
+
+    <template id="theme-template">
+      <section class="theme">
+        <h2></h2>
+        <div class="path-grid"></div>
+      </section>
+    </template>
+
+    <template id="path-template">
+      <button class="path-card" type="button">
+        <span class="path-mark" aria-hidden="true"></span>
+        <strong></strong>
+        <em></em>
+        <small></small>
+        <span class="path-link">Explore path <b aria-hidden="true">→</b></span>
+      </button>
+    </template>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <script src="script.js"></script>
+  </body>
+</html>

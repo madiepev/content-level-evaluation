@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A searchable Skills Navigator learning catalog simulation."
+    />
+    <title>Catalog discovery simulation</title>
+    <link rel="stylesheet" href="../shared-theme.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#catalog-results">Skip to catalog results</a>
+
+    <main>
+      <header class="hero">
+        <h1>Explore training your way</h1>
+        <p>
+          Build skills across Microsoft technologies. Find practical training, prepare for a
+          credential, or explore a topic at your own pace.
+        </p>
+      </header>
+
+      <section class="catalog-controls" aria-labelledby="catalog-heading">
+        <h2 id="catalog-heading" class="sr-only">Search and filter the training catalog</h2>
+
+        <form id="catalog-form" role="search">
+          <label class="search-box">
+            <span class="sr-only">Search catalog</span>
+            <input
+              id="catalog-search"
+              type="search"
+              placeholder="Search catalog"
+              autocomplete="off"
+            />
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5"></circle>
+              <path d="m16 16 4 4"></path>
+            </svg>
+          </label>
+
+          <div class="filters">
+            <label>
+              <span class="sr-only">Filter by credential</span>
+              <select id="credential-filter" name="credential">
+                <option value="">Credential</option>
+                <option value="Azure Developer Associate">Azure Developer Associate</option>
+                <option value="Security, Compliance, and Identity Fundamentals">Security, Compliance, and Identity Fundamentals</option>
+                <option value="Power BI Data Analyst Associate">Power BI Data Analyst Associate</option>
+                <option value="Azure AI Engineer Associate">Azure AI Engineer Associate</option>
+                <option value="Microsoft 365 Fundamentals">Microsoft 365 Fundamentals</option>
+                <option value="Power Automate RPA Developer Associate">Power Automate RPA Developer Associate</option>
+                <option value="GitHub Advanced Security">GitHub Advanced Security</option>
+                <option value="No credential">No credential</option>
+              </select>
+            </label>
+
+            <label>
+              <span class="sr-only">Filter by format</span>
+              <select id="format-filter" name="format">
+                <option value="">Format</option>
+                <option value="Learning path">Learning path</option>
+                <option value="Course">Course</option>
+                <option value="Module">Module</option>
+                <option value="Video">Video</option>
+              </select>
+            </label>
+
+            <label>
+              <span class="sr-only">Filter by level</span>
+              <select id="level-filter" name="level">
+                <option value="">Level</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </label>
+
+            <label>
+              <span class="sr-only">Filter by role</span>
+              <select id="role-filter" name="role">
+                <option value="">Role</option>
+                <option value="Executive">Executive</option>
+                <option value="Developer">Developer</option>
+                <option value="IT professional">IT professional</option>
+                <option value="Data professional">Data professional</option>
+                <option value="Security professional">Security professional</option>
+                <option value="Sales">Sales</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Customer service">Customer service</option>
+                <option value="Faculty">Faculty</option>
+                <option value="Non-profit">Non-profit</option>
+                <option value="Student">Student</option>
+              </select>
+            </label>
+
+            <label>
+              <span class="sr-only">Filter by duration</span>
+              <select id="duration-filter" name="duration">
+                <option value="">Duration</option>
+                <option value="Under 1 hour">Under 1 hour</option>
+                <option value="1–3 hours">1–3 hours</option>
+                <option value="3–6 hours">3–6 hours</option>
+                <option value="Over 6 hours">Over 6 hours</option>
+              </select>
+            </label>
+          </div>
+        </form>
+      </section>
+
+      <section id="catalog-results" class="results" aria-labelledby="results-title">
+        <div class="results-heading">
+          <div>
+            <p class="eyebrow">Learning catalog</p>
+            <h2 id="results-title"><span id="result-count">8</span> results</h2>
+          </div>
+          <button id="clear-filters" type="button" hidden>Clear filters</button>
+        </div>
+
+        <div id="card-grid" class="card-grid">
+          <article
+            class="catalog-card"
+            data-title="Build and operate solutions on Azure"
+            data-description="Deploy cloud applications and apply security reliability and monitoring practices."
+            data-credential="Azure Developer Associate"
+            data-format="Learning path"
+            data-level="Intermediate"
+            data-role="Developer"
+            data-duration="3–6 hours"
+          >
+            <div class="card-meta">
+              <span class="format">Learning path</span><span>5h 10m</span><span>Intermediate</span>
+            </div>
+            <h3>Build and operate solutions on Azure</h3>
+            <p>Deploy cloud applications and apply security, reliability, and monitoring practices.</p>
+            <div class="card-footer">
+              <span class="credential">Azure Developer Associate</span>
+              <a href="#azure-path" aria-label="Open Build and operate solutions on Azure">View learning path <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article
+            class="catalog-card"
+            data-title="Secure identities and cloud resources"
+            data-description="Build foundational security skills across identity access data and infrastructure."
+            data-credential="Security, Compliance, and Identity Fundamentals"
+            data-format="Course"
+            data-level="Beginner"
+            data-role="Security professional"
+            data-duration="Over 6 hours"
+          >
+            <div class="card-meta">
+              <span class="format">Course</span><span>8h</span><span>Beginner</span>
+            </div>
+            <h3>Secure identities and cloud resources</h3>
+            <p>Build foundational security skills across identity, access, data, and infrastructure.</p>
+            <div class="card-footer">
+              <span class="credential">Security, Compliance, and Identity Fundamentals</span>
+              <a href="#security-course" aria-label="Open Secure identities and cloud resources">View course <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article
+            class="catalog-card"
+            data-title="Analyze data with Power BI"
+            data-description="Connect transform model and visualize data to create useful business insights."
+            data-credential="Power BI Data Analyst Associate"
+            data-format="Learning path"
+            data-level="Beginner"
+            data-role="Data professional"
+            data-duration="3–6 hours"
+          >
+            <div class="card-meta">
+              <span class="format">Learning path</span><span>4h 25m</span><span>Beginner</span>
+            </div>
+            <h3>Analyze data with Power BI</h3>
+            <p>Connect, transform, model, and visualize data to create useful business insights.</p>
+            <div class="card-footer">
+              <span class="credential">Power BI Data Analyst Associate</span>
+              <a href="#power-bi-path" aria-label="Open Analyze data with Power BI">View learning path <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article
+            class="catalog-card"
+            data-title="Design agent workflows with Microsoft Foundry"
+            data-description="Plan agent tools instructions orchestration and evaluation for a reliable solution."
+            data-credential="Azure AI Engineer Associate"
+            data-format="Module"
+            data-level="Intermediate"
+            data-role="Developer"
+            data-duration="Under 1 hour"
+          >
+            <div class="card-meta">
+              <span class="format">Module</span><span>48m</span><span>Intermediate</span>
+            </div>
+            <h3>Design agent workflows with Microsoft Foundry</h3>
+            <p>Plan agent tools, instructions, orchestration, and evaluation for a reliable solution.</p>
+            <div class="card-footer">
+              <span class="credential">Azure AI Engineer Associate</span>
+              <a href="#agent-module" aria-label="Open Design agent workflows with Microsoft Foundry">Start module <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article
+            class="catalog-card"
+            data-title="Lead technology transformation"
+            data-description="Connect technology strategy organizational readiness and measurable business outcomes."
+            data-credential="No credential"
+            data-format="Video"
+            data-level="Advanced"
+            data-role="Executive"
+            data-duration="Under 1 hour"
+          >
+            <div class="card-meta">
+              <span class="format">Video</span><span>35m</span><span>Advanced</span>
+            </div>
+            <h3>Lead technology transformation</h3>
+            <p>Connect technology strategy, organizational readiness, and measurable business outcomes.</p>
+            <div class="card-footer">
+              <span class="credential neutral">No credential</span>
+              <a href="#transformation-video" aria-label="Open Lead technology transformation">Watch video <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article
+            class="catalog-card"
+            data-title="Get started with Microsoft 365 Copilot"
+            data-description="Discover core capabilities and practical ways to use Copilot in everyday work."
+            data-credential="Microsoft 365 Fundamentals"
+            data-format="Module"
+            data-level="Beginner"
+            data-role="IT professional"
+            data-duration="Under 1 hour"
+          >
+            <div class="card-meta">
+              <span class="format">Module</span><span>42m</span><span>Beginner</span>
+            </div>
+            <h3>Get started with Microsoft 365 Copilot</h3>
+            <p>Discover core capabilities and practical ways to use Copilot in everyday work.</p>
+            <div class="card-footer">
+              <span class="credential">Microsoft 365 Fundamentals</span>
+              <a href="#copilot-module" aria-label="Open Get started with Microsoft 365 Copilot">Start module <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article
+            class="catalog-card"
+            data-title="Automate business processes with Power Platform"
+            data-description="Create maintainable flows that connect services data and approval processes."
+            data-credential="Power Automate RPA Developer Associate"
+            data-format="Learning path"
+            data-level="Intermediate"
+            data-role="Developer"
+            data-duration="1–3 hours"
+          >
+            <div class="card-meta">
+              <span class="format">Learning path</span><span>2h 40m</span><span>Intermediate</span>
+            </div>
+            <h3>Automate business processes with Power Platform</h3>
+            <p>Create maintainable flows that connect services, data, and approval processes.</p>
+            <div class="card-footer">
+              <span class="credential">Power Automate RPA Developer Associate</span>
+              <a href="#power-platform-path" aria-label="Open Automate business processes with Power Platform">View learning path <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article
+            class="catalog-card"
+            data-title="Protect code with GitHub Advanced Security"
+            data-description="Configure code scanning secret scanning and dependency protections at scale."
+            data-credential="GitHub Advanced Security"
+            data-format="Course"
+            data-level="Advanced"
+            data-role="Developer"
+            data-duration="1–3 hours"
+          >
+            <div class="card-meta">
+              <span class="format">Course</span><span>2h 15m</span><span>Advanced</span>
+            </div>
+            <h3>Protect code with GitHub Advanced Security</h3>
+            <p>Configure code scanning, secret scanning, and dependency protections at scale.</p>
+            <div class="card-footer">
+              <span class="credential">GitHub Advanced Security</span>
+              <a href="#github-security-course" aria-label="Open Protect code with GitHub Advanced Security">View course <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+
+        <div id="empty-state" class="empty-state" hidden>
+          <h3>No training matches those filters</h3>
+          <p>Try a broader search or clear one or more filters.</p>
+          <button type="button">Clear all filters</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
