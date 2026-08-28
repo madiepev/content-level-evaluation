@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A guided Skills Navigator onboarding simulation inspired by preference-based learning platforms."
+    />
+    <title>Guided personalization simulation</title>
+    <link rel="stylesheet" href="../shared-theme.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <main id="main">
+      <section id="onboarding-view" class="onboarding-view" aria-labelledby="onboarding-title">
+        <div class="onboarding-heading">
+          <div>
+            <h1 id="onboarding-title" tabindex="-1">Follow your curiosity</h1>
+            <p>Choose what matters to you now. You can update these preferences at any time.</p>
+          </div>
+          <div id="step" class="step" aria-label="Step 1 of 4">
+            <span id="step-label">1 of 4</span>
+            <span class="step-track"><i id="step-progress"></i></span>
+          </div>
+        </div>
+
+        <form id="personalization-form">
+          <fieldset data-step="0" aria-labelledby="goal-question">
+            <h2 id="goal-question" class="question-title">Why are you learning? <span>Required</span></h2>
+            <p class="field-help">Choose the goal that best describes what you want to achieve.</p>
+            <div class="chips" data-selection="single">
+              <label><input type="radio" name="goal" value="Get started with a new technology" checked /><span>Get started with a new technology</span></label>
+              <label><input type="radio" name="goal" value="Learn new skills" /><span>Learn new skills</span></label>
+              <label><input type="radio" name="goal" value="Prepare for a credential" /><span>Prepare for a credential</span></label>
+              <label><input type="radio" name="goal" value="Solve a work challenge" /><span>Solve a work challenge</span></label>
+              <label><input type="radio" name="goal" value="Grow my team" /><span>Grow my team</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset data-step="1" aria-labelledby="role-question" hidden>
+            <h2 id="role-question" class="question-title">Which role is closest to your work?</h2>
+            <p class="field-help">Select one or more roles so recommendations use relevant scenarios.</p>
+            <div class="chips">
+              <label><input type="checkbox" name="role" value="Executive" /><span>Executive</span></label>
+              <label><input type="checkbox" name="role" value="Developer" checked /><span>Developer</span></label>
+              <label><input type="checkbox" name="role" value="IT professional" /><span>IT professional</span></label>
+              <label><input type="checkbox" name="role" value="Data professional" /><span>Data professional</span></label>
+              <label><input type="checkbox" name="role" value="Security professional" /><span>Security professional</span></label>
+              <label><input type="checkbox" name="role" value="Sales" /><span>Sales</span></label>
+              <label><input type="checkbox" name="role" value="Marketing" /><span>Marketing</span></label>
+              <label><input type="checkbox" name="role" value="Customer service" /><span>Customer service</span></label>
+              <label><input type="checkbox" name="role" value="Faculty" /><span>Faculty</span></label>
+              <label><input type="checkbox" name="role" value="Non-profit" /><span>Non-profit</span></label>
+              <label><input type="checkbox" name="role" value="Student" /><span>Student</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset data-step="2" aria-labelledby="topic-question" hidden>
+            <h2 id="topic-question" class="question-title">What are you interested in?</h2>
+            <p class="field-help">Pick as many topics as you like.</p>
+            <div class="chips topic-chips">
+              <label><input type="checkbox" name="topic" value="Azure cloud" checked /><span>Azure cloud</span></label>
+              <label><input type="checkbox" name="topic" value="Security" checked /><span>Security</span></label>
+              <label><input type="checkbox" name="topic" value="Data and analytics" /><span>Data and analytics</span></label>
+              <label><input type="checkbox" name="topic" value="Power Platform" /><span>Power Platform</span></label>
+              <label><input type="checkbox" name="topic" value="Microsoft 365" /><span>Microsoft 365</span></label>
+              <label><input type="checkbox" name="topic" value="Developer tools" /><span>Developer tools</span></label>
+              <label><input type="checkbox" name="topic" value="AI and agents" /><span>AI and agents</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset data-step="3" aria-labelledby="level-question" hidden>
+            <h2 id="level-question" class="question-title">What's your comfort level?</h2>
+            <p class="field-help">Choose the level that best reflects your current experience.</p>
+            <div class="level-options">
+              <label>
+                <input type="radio" name="level" value="Beginner" />
+                <span>Beginner</span>
+              </label>
+              <label>
+                <input type="radio" name="level" value="Intermediate" checked />
+                <span>Intermediate</span>
+              </label>
+              <label>
+                <input type="radio" name="level" value="Advanced" />
+                <span>Advanced</span>
+              </label>
+            </div>
+            <p id="level-description" class="level-description">
+              Intermediate: I understand the fundamentals and want to apply them in my work.
+            </p>
+          </fieldset>
+
+          <div class="form-footer">
+            <button id="back-button" class="secondary-button" type="button" hidden>
+              <span aria-hidden="true">←</span> Back
+            </button>
+            <p>Your answers shape the recommendation.</p>
+            <button id="next-button" class="primary-button" type="button">
+              Continue <span aria-hidden="true">→</span>
+            </button>
+            <button id="create-button" class="primary-button" type="submit" hidden>
+              Create my experience <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section id="dashboard-view" class="dashboard-view" aria-labelledby="dashboard-title" hidden>
+        <div class="dashboard-content">
+          <div class="welcome">
+            <h1 id="dashboard-title" tabindex="-1">Your learning path is ready</h1>
+            <p id="personalized-summary"></p>
+          </div>
+
+          <section id="recommendations" class="recommendations" aria-labelledby="recommendations-title">
+            <div class="section-heading">
+              <div>
+                <h2 id="recommendations-title">Start with this learning path</h2>
+              </div>
+            </div>
+
+            <article class="path-card">
+              <div class="path-art" aria-hidden="true">
+                <span id="path-icon">△</span>
+              </div>
+              <div class="path-body">
+                <div class="card-meta">
+                  <span class="content-kind">Learning path</span>
+                  <span id="path-duration">5h 10m</span>
+                  <span id="path-level">Intermediate</span>
+                </div>
+                <h3 id="path-title">Build and operate solutions on Azure</h3>
+                <p id="path-description">
+                  Build a strong Azure foundation, deploy common workloads, and apply security and
+                  reliability practices.
+                </p>
+                <div class="path-footer">
+                  <div class="progress-wrapper">
+                    <span class="progress-label">Not started</span>
+                    <span class="progress"><i></i></span>
+                  </div>
+                  <div class="result-actions">
+                    <button id="edit-preferences" class="secondary-button" type="button">Change answers</button>
+                    <button class="primary-button" type="button">Start learning</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
