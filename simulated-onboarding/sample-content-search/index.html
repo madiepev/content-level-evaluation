@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simulated search experience using the 100-item AI and machine learning research sample."
+    />
+    <title>Sample content search simulation</title>
+    <link rel="stylesheet" href="../shared-theme.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#search-results">Skip to search results</a>
+
+    <main>
+      <header class="hero">
+        <p class="eyebrow">Research dataset</p>
+        <h1>Find AI and machine learning training</h1>
+        <p>
+          Search and filter the 100 learning items selected for the content-level evaluation.
+        </p>
+      </header>
+
+      <section class="catalog-controls" aria-labelledby="search-heading">
+        <h2 id="search-heading" class="sr-only">Search and filter the sample</h2>
+
+        <form id="search-form" role="search">
+          <label class="search-box">
+            <span class="sr-only">Search the content sample</span>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Search by title, topic, or description"
+              autocomplete="off"
+            />
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5"></circle>
+              <path d="m16 16 4 4"></path>
+            </svg>
+          </label>
+
+          <div class="filters">
+            <label>
+              <span class="sr-only">Filter by skill</span>
+              <select id="skill-filter" name="skill">
+                <option value="">Skill</option>
+              </select>
+            </label>
+            <label>
+              <span class="sr-only">Filter by format</span>
+              <select id="format-filter" name="format">
+                <option value="">Format</option>
+              </select>
+            </label>
+            <label>
+              <span class="sr-only">Filter by proficiency level</span>
+              <select id="level-filter" name="level">
+                <option value="">Level</option>
+              </select>
+            </label>
+            <label>
+              <span class="sr-only">Filter by duration</span>
+              <select id="duration-filter" name="duration">
+                <option value="">Duration</option>
+                <option value="Under 1 hour">Under 1 hour</option>
+                <option value="1–3 hours">1–3 hours</option>
+                <option value="3–6 hours">3–6 hours</option>
+                <option value="Over 6 hours">Over 6 hours</option>
+                <option value="Not specified">Not specified</option>
+              </select>
+            </label>
+            <label>
+              <span class="sr-only">Filter by training organization</span>
+              <select id="organization-filter" name="organization">
+                <option value="">Organization</option>
+              </select>
+            </label>
+          </div>
+        </form>
+      </section>
+
+      <section id="search-results" class="results" aria-labelledby="results-title">
+        <div class="results-heading">
+          <div>
+            <p class="eyebrow">Representative sample</p>
+            <h2 id="results-title" aria-live="polite">
+              <span id="result-count">100</span> results
+            </h2>
+          </div>
+          <button id="clear-filters" type="button" hidden>Clear filters</button>
+        </div>
+
+        <p id="loading-state" class="status-message">Loading the content sample…</p>
+        <div id="card-grid" class="card-grid" aria-busy="true"></div>
+
+        <div id="empty-state" class="empty-state" hidden>
+          <h3>No content matches those filters</h3>
+          <p>Try a broader search or clear one or more filters.</p>
+          <button type="button">Clear all filters</button>
+        </div>
+
+        <div class="more-row">
+          <button id="show-more" type="button" hidden>Show more results</button>
+        </div>
+      </section>
+    </main>
+
+    <template id="result-card-template">
+      <article class="catalog-card">
+        <div class="card-meta">
+          <span class="format"></span><span class="duration"></span><span class="level"></span>
+        </div>
+        <h3></h3>
+        <p></p>
+        <div class="card-footer">
+          <div class="tags">
+            <span class="skill-tag"></span>
+            <span class="organization-tag"></span>
+          </div>
+          <a target="_blank" rel="noreferrer">View course <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
