@@ -1,21 +1,3 @@
-:root {
-  --canvas: #fffdfb;
-  --surface: #ffffff;
-  --surface-subtle: #faf6f0;
-  --border: #e8e6e3;
-  --border-strong: #d1d1d1;
-  --text: #272320;
-  --text-secondary: #4c4642;
-  --text-muted: #635c57;
-  --brand: #6b55a3;
-  --brand-hover: #5e4b8f;
-  --brand-soft: #d8d3ef;
-  --brand-soft-strong: #cfc8ef;
-  --success: #2eaa7b;
-  --link: #5e4b8f;
-  --font: "Segoe Sans", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
 * {
   box-sizing: border-box;
 }
