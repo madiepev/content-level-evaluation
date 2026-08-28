@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simulated AI Skills Navigator conversational onboarding experience."
+    />
+    <title>Skilling playlist builder simulation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conversation">Skip to conversation</a>
+
+    <main id="conversation" class="conversation" aria-labelledby="page-title">
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">Skilling playlist builder</h1>
+        <p>I'm here to help you design a tailored skilling playlist for yourself or your team.</p>
+
+        <hr />
+
+        <h2>Let's get started</h2>
+        <p>To shape a playlist that works for you, tell me a few essentials:</p>
+
+        <div class="question-group">
+          <h3><span class="check" aria-hidden="true">✓</span> Who is this for?</h3>
+          <ul>
+            <li>Is the playlist for you or for a team?</li>
+            <li>If it's for a team, what roles and experience levels are represented?</li>
+          </ul>
+        </div>
+
+        <div class="question-group">
+          <h3><span class="check" aria-hidden="true">✓</span> Learning outcomes</h3>
+          <ul>
+            <li>What should learners be able to do afterward?</li>
+            <li>Are there specific growth areas, priorities, or topics to focus on?</li>
+          </ul>
+        </div>
+
+        <hr />
+
+        <p>
+          Once I have these details, I'll create a playlist that fits your goals.
+          <strong>Add any context that matters—the more you share, the better the playlist.</strong>
+        </p>
+      </section>
+
+      <section id="messages" class="messages" aria-label="Conversation" aria-live="polite"></section>
+    </main>
+
+    <div class="composer-shell">
+      <div id="suggestions" class="suggestions" aria-label="Suggested replies" hidden>
+        <button type="button" data-action="save">Yes, save it</button>
+        <button type="button" data-action="hands-on">Tune for hands-on only</button>
+        <button type="button" data-action="timeline">No, change timeline…</button>
+      </div>
+
+      <form id="composer" class="composer" aria-label="Send a message">
+        <label class="sr-only" for="message-input">Tell the playlist builder more</label>
+        <textarea id="message-input" rows="3">Create this for customer success architects who help customers build AI agents and multi-agent solutions. Focus on evaluating and improving agent routing and orchestration decisions, including agent cards, routing evaluation, orchestration patterns, observability, and governance.</textarea>
+        <button id="send-button" class="send-button" type="submit" aria-label="Send message">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h13M13 6l6 6-6 6" />
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <template id="user-message-template">
+      <article class="message-row user-row">
+        <div>
+          <time class="message-time"></time>
+          <div class="user-message"></div>
+        </div>
+        <div class="avatar" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5" />
+            <path d="M5.5 19c.5-3.7 2.7-5.5 6.5-5.5s6 1.8 6.5 5.5" />
+          </svg>
+        </div>
+      </article>
+    </template>
+
+    <template id="loading-template">
+      <article class="assistant-message loading-message" aria-label="Building playlist">
+        <div class="assistant-heading">
+          <h2>Skilling playlist builder</h2>
+        </div>
+        <div class="typing" aria-hidden="true"><span></span><span></span><span></span></div>
+        <span class="sr-only">Building your playlist.</span>
+      </article>
+    </template>
+
+    <template id="playlist-template">
+      <article class="assistant-message">
+        <div class="assistant-heading">
+          <h2>Skilling playlist builder</h2>
+          <time class="response-time"></time>
+        </div>
+
+        <p>
+          Got it. You're enabling customer success architects to help customers build
+          AI agent and multi-agent solutions with stronger routing and orchestration decisions.
+        </p>
+
+        <div class="summary">
+          <p>
+            <strong>Assumptions:</strong> Customer success architects are the target learners;
+            mixed formats are fine; the focus is Azure AI agents and practical, hands-on adoption.
+          </p>
+          <p>
+            <strong>Objective:</strong> Build the capability to design, evaluate, and govern Azure
+            AI multi-agent systems with effective routing and orchestration.
+          </p>
+          <p>
+            <strong>Goal:</strong> Confidently guide customers toward reliable, observable, and
+            compliant multi-agent solutions.
+          </p>
+          <p>This recommendation won't be saved until you confirm it.</p>
+        </div>
+
+        <h2 class="playlist-title">
+          <span aria-hidden="true">🤖</span>
+          CSA playbook: Evaluating and improving agent routing and orchestration
+        </h2>
+
+        <section class="playlist-section">
+          <h3><span aria-hidden="true">🧩</span> Agent design foundations with agent cards <span>1h 10m</span></h3>
+          <p><strong>Outcome</strong> — Define clear agent roles and collaboration patterns so multi-agent solutions are testable and composable.</p>
+          <ol>
+            <li><a href="#">Design enterprise-scale agent communication with A2A in Azure</a> <span>48m</span></li>
+            <li><a href="#">Get started with AI in Azure</a> <span>22m</span></li>
+          </ol>
+        </section>
+
+        <section class="playlist-section">
+          <h3><span aria-hidden="true">🧭</span> Routing strategies and evaluation <span>1h 13m</span></h3>
+          <p><strong>Outcome</strong> — Compare policy and ML routing, reason about quality-cost-latency trade-offs, and evaluate decisions using traces and experiments.</p>
+          <ol>
+            <li><a href="#">Optimize multi-agent performance and cost in Microsoft Foundry</a> <span>40m</span></li>
+            <li><a href="#">Introduction to agentic AI solution architecture</a> <span>32m</span></li>
+            <li><a href="#">Scale and orchestrate multi-agent systems</a> <span>1m</span></li>
+          </ol>
+        </section>
+
+        <section class="playlist-section">
+          <h3><span aria-hidden="true">🛠️</span> Azure-native orchestration patterns <span>2h 31m</span></h3>
+          <p><strong>Outcome</strong> — Apply coordination, parallelization, retries, and state patterns with Azure services for production-ready systems.</p>
+          <ol>
+            <li><a href="#">Implement advanced multi-agent orchestration patterns</a> <span>48m</span></li>
+            <li><a href="#">Azure Decoded: Multi-agent orchestration on Azure</a> <span>1h 3m</span></li>
+            <li><a href="#">Debug production multi-agent incidents in Azure</a> <span>40m</span></li>
+          </ol>
+        </section>
+
+        <section class="playlist-section">
+          <h3><span aria-hidden="true">🛡️</span> Observability, security, and governance <span>2h 3m</span></h3>
+          <p><strong>Outcome</strong> — Implement distributed telemetry and responsible AI controls for identity, data protection, and auditability.</p>
+          <ol>
+            <li><a href="#">Implement distributed observability with OpenTelemetry</a> <span>41m</span></li>
+            <li><a href="#">Scale responsible AI governance with Azure AI Content Safety</a> <span>41m</span></li>
+            <li><a href="#">Governance strategies for AI agents</a> <span>16m</span></li>
+            <li><a href="#">Unlock governance for your AI workforce</a> <span>25m</span></li>
+          </ol>
+        </section>
+
+        <p class="confirmation-question">
+          Would you like me to save this <em>skilling playlist</em> for your team? I can save it
+          as-is or tune the format and pacing first.
+        </p>
+
+        <div class="feedback" aria-label="Rate this response">
+          <button type="button" aria-label="Helpful response">♡</button>
+          <button type="button" aria-label="Not helpful response">♧</button>
+          <button type="button" aria-label="Copy response">▢</button>
+        </div>
+      </article>
+    </template>
+
+    <template id="saved-template">
+      <article class="assistant-message saved-message">
+        <div class="assistant-heading">
+          <h2>Skilling playlist builder</h2>
+          <time class="response-time"></time>
+        </div>
+        <h3>Done! Your skilling playlist is ready</h3>
+        <a class="view-playlist-button" href="#playlist">View skilling playlist</a>
+        <div class="feedback" aria-label="Rate this response">
+          <button type="button" aria-label="Helpful response">♡</button>
+          <button type="button" aria-label="Not helpful response">♧</button>
+          <button type="button" aria-label="Copy response">▢</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
