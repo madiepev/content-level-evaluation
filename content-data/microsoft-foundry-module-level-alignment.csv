@@ -1,0 +1,156 @@
+module_title,module_url,catalog_level,rubric_level,level_difference
+A guide to artificial intelligence,https://learn.microsoft.com/training/modules/a-guide-to-artificial-intelligence/,beginner,L100,0
+Accelerate nonprofit funding solutions with Microsoft Copilot,https://learn.microsoft.com/training/modules/accelerate-nonprofit-funding-solutions-microsoft-copilot/,beginner,L200,1
+Add Azure AI services to your mixed reality project,https://learn.microsoft.com/training/modules/azure-speech-services-tutorials-mrtk/,beginner,L200,1
+Analyze and debug your generative AI app with tracing,https://learn.microsoft.com/training/modules/tracing-generative-ai-app/,intermediate,L300,0
+Analyze images with Content Understanding,https://learn.microsoft.com/training/modules/analyze-images-with-content-understanding/,intermediate,L300,0
+Analyze text with Azure Language in Foundry Tools,https://learn.microsoft.com/training/modules/analyze-text-ai-language/,intermediate,L300,0
+Apply responsible AI principles in learning environments,https://learn.microsoft.com/training/modules/apply-responsible-ai-principles/,beginner,L200,1
+Apply task decomposition and agent collaboration strategies in Microsoft Foundry,https://learn.microsoft.com/training/modules/aaai-apply-task-decomposition-multi-agent-azure/,advanced,L200,-1
+Architect scalable and cost-efficient AI agent solutions on Azure,https://learn.microsoft.com/training/modules/architect-scalable-ai-agent-solutions/,intermediate,L300,0
+Automate AI evaluations with Microsoft Foundry and GitHub Actions,https://learn.microsoft.com/training/modules/automated-evaluation-genaiops/,intermediate,L300,0
+Build a 3D Scene for mixed reality in Unity,https://learn.microsoft.com/training/modules/build-3d-scene-mixed-reality-unity/,beginner,L200,1
+Build agent-driven workflows using Microsoft Foundry,https://learn.microsoft.com/training/modules/build-agent-workflows-microsoft-foundry/,beginner,L200,1
+Build AI-powered solutions using SQL Server 2025,https://learn.microsoft.com/training/modules/build-ai-solutions-sql-server/,beginner,L200,1
+Build and extend AI agents with Microsoft Foundry,https://learn.microsoft.com/training/modules/build-extend-ai-agents/,intermediate,L300,0
+Build enterprise-grade tool ecosystems with MCP and Microsoft Foundry,https://learn.microsoft.com/training/modules/aaai-build-enterprise-tool-ecosystems-mcp-azure/,advanced,L200,-1
+Build knowledge-enhanced AI agents with Foundry IQ,https://learn.microsoft.com/training/modules/introduction-foundry-iq/,intermediate,L200,0
+"Build the vision - visual content creation with Copilot, Designer & Clipchamp",https://learn.microsoft.com/training/modules/build-vision/,beginner,L200,1
+Challenge project - Build a speech translator app,https://learn.microsoft.com/training/modules/challenge-project-build-speech-translator-app/,beginner,L200,1
+Configure 3D assets for mixed reality in Unity,https://learn.microsoft.com/training/modules/configure-3d-assets-mixed-reality-unity/,beginner,L200,1
+Configure AI Gateway security in Microsoft Foundry,https://learn.microsoft.com/training/modules/configure-ai-gateway-security-foundry/,intermediate,L200,0
+Configure AI-ready infrastructure with Microsoft Foundry,https://learn.microsoft.com/training/modules/configure-ai-ready-infrastructure-microsoft-foundry/,intermediate,L200,0
+Configure and manage guardrails in Microsoft Foundry,https://learn.microsoft.com/training/modules/azure-ai-foundry-configure-manage-guardrails/,intermediate,L200,0
+Configure network security for Azure Storage,https://learn.microsoft.com/training/modules/configure-network-security-azure-storage/,intermediate,L200,0
+Connect IoT data to mixed reality with Azure Digital Twins and Unity,https://learn.microsoft.com/training/modules/connect-iot-hololens-azure-digital-twins-unity/,intermediate,L200,0
+Connect IoT devices to Azure AI Speech using Azure Functions,https://learn.microsoft.com/training/modules/connecting-iot-devices-cognitive-services-azure-functions/,intermediate,L200,0
+Convert Oracle schemas to Azure Database for PostgreSQL by using AI,https://learn.microsoft.com/training/modules/convert-oracle-schema-azure-database-postgresql-ai/,intermediate,L200,0
+Create a knowledge mining solution with Azure AI Search,https://learn.microsoft.com/training/modules/ai-knowldge-mining/,intermediate,L200,0
+Create a large language model deployment,https://learn.microsoft.com/training/modules/large-language-model-deployment/,beginner,L200,1
+Create a multimodal analysis solution with Azure Content Understanding,https://learn.microsoft.com/training/modules/analyze-content-ai/,beginner,L200,1
+Create an Azure Content Understanding client application,https://learn.microsoft.com/training/modules/analyze-content-ai-api/,intermediate,L200,0
+"Create an image recognition solution with Azure IoT Edge, Azure AI Custom Vision, and Azure Speech",https://learn.microsoft.com/training/modules/create-image-recognition-solution-iot-edge-cognitive-services/,intermediate,L200,0
+Create effective prompts for generative AI training tools,https://learn.microsoft.com/training/modules/create-prompts-for-generative-ai-training-tools/,beginner,L200,1
+Create images with generative AI,https://learn.microsoft.com/training/modules/create-images-with-generative-ai/,beginner,L200,1
+Create speech-enabled apps with Azure Speech in Microsoft Foundry Tools,https://learn.microsoft.com/training/modules/create-speech-enabled-apps/,intermediate,L200,0
+Debug and respond to production multi-agent incidents in Azure,https://learn.microsoft.com/training/modules/aaai-debug-production-multi-agent-incidents-azure/,advanced,L300,-1
+Design advanced prompting strategies for production AI agents,https://learn.microsoft.com/training/modules/aaai-design-advanced-prompt-production-agents/,advanced,L300,-1
+Design AI agents for business solutions,https://learn.microsoft.com/training/modules/design-ai-agents-business-solutions/,advanced,L300,-1
+Design AI Workloads on Azure,https://learn.microsoft.com/training/modules/design-ai-workloads/,intermediate,L300,0
+Design ALM process for AI-powered business solutions,https://learn.microsoft.com/training/modules/design-alm-process-ai-powered-business-solutions/,intermediate,L300,0
+Design enterprise-scale agent communication with A2A in Azure,https://learn.microsoft.com/training/modules/aaai-design-enterprise-agent-communication-a2a/,advanced,L300,-1
+Design evaluation frameworks for multi-agent solutions with Microsoft Foundry,https://learn.microsoft.com/training/modules/aaai-design-evaluation-frameworks-multi-agent-azure/,advanced,L300,-1
+Design extensibility of AI solutions,https://learn.microsoft.com/training/modules/design-extensibility-ai-solutions/,advanced,L300,-1
+Design human-in-the-loop approval workflows with Power Automate and Microsoft Teams,https://learn.microsoft.com/training/modules/aaai-design-human-in-loop-approval-workflows/,advanced,L300,-1
+Design multi-agent memory architectures with Azure Cosmos DB,https://learn.microsoft.com/training/modules/aaai-design-multi-agent-memory-azure-cosmos-db/,advanced,L300,-1
+"Design responsible AI security, governance, risk management, and compliance",https://learn.microsoft.com/training/modules/design-responsible-ai-security-governance-risk-management-compliance/,advanced,L300,-1
+Design stateful agentic loops with Microsoft Foundry agent service,https://learn.microsoft.com/training/modules/aaai-design-agentic-loops-azure-ai-agent-service/,advanced,L300,-1
+Develop a generative AI chat app with Microsoft Foundry,https://learn.microsoft.com/training/modules/foundry-sdk/,beginner,L200,1
+Develop a speech agent with the Azure Speech MCP server,https://learn.microsoft.com/training/modules/develop-speech-agent-speech-mcp/,intermediate,L200,0
+Develop a speech-capable generative AI application,https://learn.microsoft.com/training/modules/develop-generative-ai-audio-apps/,intermediate,L200,0
+Develop a text analysis agent with the Azure Language MCP server,https://learn.microsoft.com/training/modules/develop-text-analysis-agent-language-mcp/,intermediate,L200,0
+Develop a vision-enabled generative AI application,https://learn.microsoft.com/training/modules/develop-generative-ai-vision-apps/,intermediate,L200,0
+Develop AI agents with Microsoft Foundry and Visual Studio Code,https://learn.microsoft.com/training/modules/develop-ai-agents-azure-vs-code/,intermediate,L200,0
+Develop an AI agent with Microsoft Agent Framework,https://learn.microsoft.com/training/modules/develop-ai-agent-with-semantic-kernel/,intermediate,L200,0
+Develop an AI app with the Microsoft Foundry SDK,https://learn.microsoft.com/training/modules/ai-foundry-sdk/,beginner,L200,1
+Develop an Azure Speech Voice Live Agent in Microsoft Foundry,https://learn.microsoft.com/training/modules/develop-voice-live-agent/,intermediate,L200,0
+Develop generative AI apps that use tools,https://learn.microsoft.com/training/modules/use-generative-ai-tools/,beginner,L200,1
+Develop your first agent with Microsoft Foundry,https://learn.microsoft.com/training/modules/develop-first-agent/,beginner,L200,1
+Discover Azure AI Agents with A2A,https://learn.microsoft.com/training/modules/discover-agents-with-a2a/,intermediate,L100,-1
+Embrace responsible AI principles and practices,https://learn.microsoft.com/training/modules/embrace-responsible-ai-principles-practices/,beginner,L200,1
+Enhance nonprofit volunteer management with Microsoft Copilot,https://learn.microsoft.com/training/modules/enhance-nonprofit-volunteer-management-microsoft-copilot/,beginner,L200,1
+Evaluate and optimize AI agents through structured experiments,https://learn.microsoft.com/training/modules/evaluate-optimize-agents/,intermediate,L400,1
+Explore AI governance for AI ready infrastructure,https://learn.microsoft.com/training/modules/explore-ai-governance-ai-ready-infrastructure/,intermediate,L100,-1
+Explore data roles and services,https://learn.microsoft.com/training/modules/explore-roles-responsibilities-world-of-data/,beginner,L100,0
+Exploring artificial intelligence in action,https://learn.microsoft.com/training/modules/exploring-artificial-intelligence-in-action/,beginner,L100,0
+Extract data with Azure Document Intelligence,https://learn.microsoft.com/training/modules/extract-data-with-document-intelligence/,intermediate,L200,0
+Extract insights using Azure Language and Azure Database for PostgreSQL,https://learn.microsoft.com/training/modules/extract-insights-using-azure-ai-language-azure-database-postgresq/,intermediate,L200,0
+Forecast the return on investment (ROI) of AI agents,https://learn.microsoft.com/training/modules/forecast-agent-return-investment/,intermediate,L400,1
+Generate images with AI,https://learn.microsoft.com/training/modules/generate-images-azure-openai/,intermediate,L200,0
+Generate videos with Microsoft Foundry,https://learn.microsoft.com/training/modules/generate-video-with-foundry/,intermediate,L200,0
+Get started with AI agent development on Azure,https://learn.microsoft.com/training/modules/ai-agent-fundamentals/,beginner,L100,0
+Get started with AI in Azure,https://learn.microsoft.com/training/modules/get-started-with-ai-in-azure/,beginner,L100,0
+Get started with AI-powered information extraction in Azure,https://learn.microsoft.com/training/modules/get-started-information-extraction/,beginner,L100,0
+Get started with Claude in Microsoft Foundry,https://learn.microsoft.com/training/modules/claude-in-foundry/,intermediate,L100,-1
+Get started with computer vision in Azure,https://learn.microsoft.com/training/modules/get-started-vision-azure/,beginner,L100,0
+Get started with generative AI and agents in Azure,https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/,beginner,L100,0
+Get started with Microsoft Foundry IQ,https://learn.microsoft.com/training/modules/get-started-foundry-iq/,beginner,L100,0
+Get started with speech in Azure,https://learn.microsoft.com/training/modules/get-started-speech-azure/,beginner,L100,0
+Get started with text analysis in Azure,https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/,beginner,L100,0
+Govern AI ready workloads with Microsoft Foundry,https://learn.microsoft.com/training/modules/govern-ai-ready-workloads-microsoft-foundry/,intermediate,L200,0
+Govern AI services with Azure Policy,https://learn.microsoft.com/training/modules/govern-ai-azure-policy/,beginner,L200,1
+Govern the enterprise agent lifecycle in Microsoft Foundry,https://learn.microsoft.com/training/modules/aaai-govern-enterprise-agent-lifecycle-azure/,advanced,L200,-1
+Guided project - Embrace responsible AI,https://learn.microsoft.com/training/modules/embrace-responsible-ai/,beginner,L200,1
+Identify and Prioritize High-Impact AI Agent Use Cases,https://learn.microsoft.com/training/modules/identify-ai-agent-use-case/,intermediate,L400,1
+Implement a responsible generative AI solution in Microsoft Foundry,https://learn.microsoft.com/training/modules/responsible-ai-studio/,intermediate,L300,0
+Implement advanced multi-agent orchestration patterns in Microsoft Foundry,https://learn.microsoft.com/training/modules/aaai-implement-multi-agent-orchestration-azure-ai-foundry/,advanced,L300,-1
+Implement advanced RAG pipelines with Azure AI Search and Microsoft Foundry,https://learn.microsoft.com/training/modules/aaai-implement-advanced-rag-azure-ai-search/,advanced,L300,-1
+Implement AI tools into a training environment,https://learn.microsoft.com/training/modules/implement-ai-tools-into-training-environment/,beginner,L300,1
+Implement Azure OpenAI keyless authentication with Java,https://learn.microsoft.com/training/modules/intro-azure-openai-managed-identity-auth-java/,beginner,L300,1
+Implement best practices to empower AI agent efficiency and ensure long-term success,https://learn.microsoft.com/training/modules/adopt-ai-agent-best-practice/,intermediate,L300,0
+Implement CI/CD pipelines for multi-agent systems with GitHub Actions,https://learn.microsoft.com/training/modules/aaai-implement-cicd-multi-agent-systems-github-actions/,advanced,L300,-1
+Implement distributed observability for multi-agent solutions with OpenTelemetry,https://learn.microsoft.com/training/modules/aaai-implement-distributed-observability-multi-agent-opentelemetry/,advanced,L300,-1
+Implement generative AI agents with Azure Database for PostgreSQL,https://learn.microsoft.com/training/modules/implement-generative-ai-agents-azure-postgresql/,intermediate,L300,0
+Implement generative AI guardrails in Azure AI Foundry,https://learn.microsoft.com/training/modules/moderate-content-detect-harm-azure-ai-content-safety-studio/,beginner,L300,1
+Implement Microsoft Fabric Data Agents (chat with your data),https://learn.microsoft.com/training/modules/implement-fabric-data-agents/,intermediate,L300,0
+Implement resilient AI-ready infrastructure,https://learn.microsoft.com/training/modules/implement-resilient-ai-ready-infrastructure/,intermediate,L300,0
+Implement secure AI-ready infrastructure with Azure services,https://learn.microsoft.com/training/modules/implement-secure-ai-ready-infrastructure-azure-services/,intermediate,L300,0
+Integrate custom tools into your agent,https://learn.microsoft.com/training/modules/build-agent-with-custom-tools/,intermediate,L300,0
+Integrate MCP Tools with Azure AI Agents,https://learn.microsoft.com/training/modules/connect-agent-to-mcp-tools/,intermediate,L300,0
+Integrate your agent with Microsoft 365,https://learn.microsoft.com/training/modules/integrate-foundry-agent-with-m365/,intermediate,L300,0
+Introduction to AI speech concepts,https://learn.microsoft.com/training/modules/introduction-ai-speech/,beginner,L100,0
+Introduction to AI-powered information extraction concepts,https://learn.microsoft.com/training/modules/introduction-information-extraction/,beginner,L100,0
+Introduction to Azure OpenAI managed identity authentication with JavaScript,https://learn.microsoft.com/training/modules/intro-azure-openai-managed-identity-auth-javascript/,beginner,L100,0
+Introduction to Azure OpenAI managed identity authentication with Python,https://learn.microsoft.com/training/modules/intro-azure-openai-managed-identity-auth-python/,beginner,L100,0
+Introduction to building copilots for startups,https://learn.microsoft.com/training/modules/intro-to-copilots-for-startups/,beginner,L100,0
+Introduction to computer vision concepts,https://learn.microsoft.com/training/modules/introduction-computer-vision/,beginner,L100,0
+Introduction to computer vision with TensorFlow,https://learn.microsoft.com/training/modules/intro-computer-vision-tensorflow/,beginner,L100,0
+Introduction to generative AI - Exploring the basics,https://learn.microsoft.com/training/modules/intro-generative-ai-explore-basics/,beginner,L100,0
+Introduction to generative AI and agents,https://learn.microsoft.com/training/modules/fundamentals-generative-ai/,beginner,L100,0
+Introduction to large language models,https://learn.microsoft.com/training/modules/introduction-large-language-models/,beginner,L100,0
+Introduction to Microsoft Foundry Agent Service security controls,https://learn.microsoft.com/training/modules/intro-ai-agent-service-security-controls/,beginner,L100,0
+Introduction to Microsoft Foundry on Windows,https://learn.microsoft.com/training/modules/introduction-microsoft-foundry-windows/,beginner,L100,0
+Introduction to Microsoft's Responsible AI Approach,https://learn.microsoft.com/training/modules/introduction-to-microsofts-responsible-ai-approach/,beginner,L100,0
+Introduction to mixed reality,https://learn.microsoft.com/training/modules/intro-to-mixed-reality/,beginner,L100,0
+Introduction to natural language processing concepts,https://learn.microsoft.com/training/modules/introduction-language/,beginner,L100,0
+Introduction to retrieval-augmented generation concepts,https://learn.microsoft.com/training/modules/rag-fundamentals/,beginner,L100,0
+Introduction to using Managed Identity to authenticate to Azure OpenAI in Microsoft Foundry Models with .NET,https://learn.microsoft.com/training/modules/intro-azure-openai-managed-identity-auth-dotnet/,beginner,L100,0
+Manage and optimize AI agent investments on Azure,https://learn.microsoft.com/training/modules/manage-optimize-agent-investment-azure/,intermediate,L400,1
+Manage prompts for agents in Microsoft Foundry with GitHub,https://learn.microsoft.com/training/modules/prompt-versioning-genaiops/,intermediate,L200,0
+Maximize cost efficiency by choosing the right AI agent development approach on Azure,https://learn.microsoft.com/training/modules/maximize-cost-efficiency-ai-agent-development/,intermediate,L400,1
+Measure and mitigate risks for a generative AI app in Azure AI Foundry,https://learn.microsoft.com/training/modules/measure-mitigate-risks-azure-ai-studio/,beginner,L400,2
+Monitor your generative AI application,https://learn.microsoft.com/training/modules/monitor-generative-ai-app/,intermediate,L300,0
+Optimize and fine-tune AI agents for production,https://learn.microsoft.com/training/modules/optimize-finetune-agents/,intermediate,L400,1
+Optimize generative AI model performance with Microsoft Foundry,https://learn.microsoft.com/training/modules/optimize-generative-ai-model-performance/,intermediate,L400,1
+Optimize multi-agent performance and cost in Microsoft Foundry,https://learn.microsoft.com/training/modules/aaai-optimize-multi-agent-performance-cost-azure/,advanced,L400,0
+Orchestrate a multi-agent solution using the Microsoft Agent Framework,https://learn.microsoft.com/training/modules/orchestrate-semantic-kernel-multi-agent-solution/,intermediate,L300,0
+Plan and prepare a GenAIOps solution,https://learn.microsoft.com/training/modules/plan-prepare-genaiops/,intermediate,L200,0
+Plan and prepare to develop AI solutions on Azure,https://learn.microsoft.com/training/modules/prepare-azure-ai-development/,beginner,L200,1
+Protect AI workloads with Microsoft Defender for Cloud,https://learn.microsoft.com/training/modules/defender-for-cloud-ai-protect-workloads/,intermediate,L200,0
+Protect and govern AI ready infrastructure with Azure,https://learn.microsoft.com/training/modules/protect-govern-ai-ready-infrastructure-azure/,intermediate,L200,0
+Run evaluations and generate synthetic datasets,https://learn.microsoft.com/training/modules/run-evaluations-generate-synthetic-datasets/,beginner,L200,1
+Run governed AI workloads with Microsoft Foundry,https://learn.microsoft.com/training/modules/run-governed-ai-workloads-microsoft-foundry/,intermediate,L200,0
+Scale responsible AI governance with Azure AI Content Safety and Microsoft Foundry,https://learn.microsoft.com/training/modules/aaai-scale-responsible-ai-governance-multi-agent/,advanced,L500,0
+Secure authentication and authorization for Azure OpenAI in Microsoft Foundry,https://learn.microsoft.com/training/modules/secure-azure-openai-authentication-authorization/,beginner,L200,1
+Secure Azure OpenAI with content safety controls,https://learn.microsoft.com/training/modules/secure-azure-openai-content-safety-controls/,intermediate,L200,0
+Secure developer AI environments with Microsoft Purview,https://learn.microsoft.com/training/modules/purview-ai-developer-apps/,intermediate,L200,0
+Secure Microsoft Foundry environments,https://learn.microsoft.com/training/modules/azure-ai-foundry-secure-environment/,intermediate,L200,0
+Secure multi-agent systems with Azure zero-trust architecture,https://learn.microsoft.com/training/modules/aaai-secure-multi-agent-systems-azure-zero-trust/,advanced,L200,-1
+"Select, deploy, and evaluate Microsoft Foundry models",https://learn.microsoft.com/training/modules/model-catalog-evaluate/,intermediate,L400,1
+Set up a mixed reality project for Azure Digital Twins in Unity,https://learn.microsoft.com/training/modules/set-up-mixed-reality-azure-digital-twins-unity/,beginner,L200,1
+"Specify requirements for securing SaaS, PaaS, and IaaS services",https://learn.microsoft.com/training/modules/specify-requirements-securing-saas-paas-iaas-services/,advanced,L200,-1
+Streamline nonprofit program management with Microsoft Copilot,https://learn.microsoft.com/training/modules/streamline-nonprofit-program-management-with-microsoft-copilot/,beginner,L200,1
+Streamline training plans with AI tools,https://learn.microsoft.com/training/modules/streamline-training-plans-with-ai-tools/,beginner,L200,1
+Summarize data with Foundry Tools and Azure database for PostgreSQL,https://learn.microsoft.com/training/modules/summarize-data-azure-ai-services-azure-database-postgresql/,intermediate,L200,0
+Support multilingual and accessible family communication,https://learn.microsoft.com/training/modules/support-multilingual-accessible-family-communication/,beginner,L200,1
+Tailoring trainings with AI,https://learn.microsoft.com/training/modules/tailoring-trainings-with-ai/,beginner,L200,1
+Training with AI tools,https://learn.microsoft.com/training/modules/training-with-ai-tools/,beginner,L200,1
+Translate text and speech with Microsoft Foundry Tools,https://learn.microsoft.com/training/modules/translate-text-speech/,intermediate,L200,0
+Translate Text with Azure Translator and Azure Database for PostgreSQL,https://learn.microsoft.com/training/modules/translate-text-azure-ai-translator-azure-database-postgresql/,intermediate,L200,0
+Understand Azure Databricks Integrations,https://learn.microsoft.com/training/modules/understand-azure-databricks-integrations/,intermediate,L100,-1
+Understand how Microsoft Defender for Cloud supports AI security and governance in Azure,https://learn.microsoft.com/training/modules/defender-for-cloud-ai-understand-protections/,intermediate,L100,-1
+Understand the key cost drivers of AI agents,https://learn.microsoft.com/training/modules/ai-agent-cost-structure/,intermediate,L100,-1
+Use AI responsibly with Microsoft Foundry Content Safety,https://learn.microsoft.com/training/modules/responsible-content-safety/,intermediate,L200,0
+Use AI tools to create an inclusive learning environment,https://learn.microsoft.com/training/modules/use-ai-tools-to-create-inclusive-learning-environment/,beginner,L200,1
+Use AI-powered tools for training,https://learn.microsoft.com/training/modules/ai-powered-tools-for-teaching/,beginner,L200,1
+Use Microsoft Copilot to create training materials,https://learn.microsoft.com/training/modules/use-copilot-to-create-training-materials/,beginner,L200,1
