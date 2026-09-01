@@ -1,0 +1,28 @@
+@import url("../sample-content-search/styles.css");
+
+.catalog-card {
+  min-height: 290px;
+}
+
+.module-summary {
+  display: block;
+  overflow: visible;
+}
+
+.role-tag,
+.subject-tag {
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 999px;
+}
+
+.role-tag {
+  color: var(--brand-hover);
+  font-weight: 600;
+  background: var(--brand-tint);
+}
+
+.subject-tag {
+  color: var(--text-muted);
+  background: var(--surface-muted);
+}

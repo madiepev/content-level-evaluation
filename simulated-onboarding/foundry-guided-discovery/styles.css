@@ -1,0 +1,252 @@
+@import url("../career-pathways/styles.css");
+
+.route-view {
+  padding-top: 56px;
+}
+
+.page-heading {
+  margin-bottom: 44px;
+}
+
+.route-card {
+  min-height: 410px;
+}
+
+.portfolio-toggle {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto 36px;
+  padding: 4px;
+  background: var(--surface-muted);
+  border-radius: 999px;
+}
+
+.portfolio-toggle[hidden] {
+  display: none;
+}
+
+.portfolio-toggle button {
+  min-width: 112px;
+  padding: 9px 18px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.portfolio-toggle button[aria-pressed="true"] {
+  color: #fff;
+  background: var(--brand);
+}
+
+.portfolio-toggle button:focus-visible {
+  outline: 2px solid var(--brand-border);
+  outline-offset: 2px;
+}
+
+.theme-heading {
+  margin-bottom: 20px;
+}
+
+.theme-heading h2 {
+  margin-bottom: 6px;
+}
+
+.theme-heading p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.path-card {
+  color: inherit;
+  text-decoration: none;
+}
+
+.path-card:focus-visible {
+  border-color: var(--brand-border);
+  outline: 2px solid var(--brand-border);
+  outline-offset: 3px;
+}
+
+.path-card em {
+  font-style: normal;
+}
+
+.loading-state {
+  padding: 56px 0;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.planned-path {
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+.planned-detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 40px;
+  margin-bottom: 20px;
+  padding: 7px 12px;
+  color: var(--brand);
+  font-weight: 600;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.planned-detail-back:hover {
+  background: var(--brand-tint);
+}
+
+.planned-path-card {
+  font: inherit;
+}
+
+.planned-path-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px;
+  background: var(--brand-tint);
+  border: 1px solid var(--brand-soft-strong);
+  border-radius: 18px;
+}
+
+.planned-path-heading h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.planned-path-heading p {
+  max-width: 680px;
+  margin: 8px 0 0;
+  color: var(--text-secondary);
+}
+
+.planned-path-heading > span {
+  flex: 0 0 auto;
+  padding: 5px 10px;
+  color: var(--brand-hover);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--surface);
+  border-radius: 999px;
+}
+
+.module-sequence {
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: planned-module;
+}
+
+.module-sequence li {
+  position: relative;
+  padding-left: 46px;
+  counter-increment: planned-module;
+}
+
+.module-sequence li + li {
+  margin-top: 16px;
+}
+
+.module-sequence li::before {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--brand);
+  border-radius: 50%;
+  content: counter(planned-module);
+  place-items: center;
+}
+
+.module-sequence li:not(:last-child)::after {
+  position: absolute;
+  top: 52px;
+  bottom: -18px;
+  left: 14px;
+  width: 2px;
+  background: var(--brand-soft-strong);
+  content: "";
+}
+
+.module-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-card);
+}
+
+.module-level {
+  min-width: 54px;
+  height: fit-content;
+  padding: 4px 8px;
+  color: var(--brand-hover);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  background: var(--brand-tint);
+  border-radius: 999px;
+}
+
+.module-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.module-card p {
+  margin: 7px 0 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .route-view {
+    padding-top: 40px;
+  }
+
+  .portfolio-toggle {
+    margin-bottom: 28px;
+  }
+
+  .planned-path-heading {
+    display: block;
+    padding: 22px;
+  }
+
+  .planned-path-heading > span {
+    display: inline-block;
+    margin-top: 18px;
+  }
+
+  .module-sequence li {
+    padding-left: 0;
+  }
+
+  .module-sequence li::before,
+  .module-sequence li::after {
+    display: none;
+  }
+
+  .module-card {
+    grid-template-columns: 1fr;
+  }
+}
