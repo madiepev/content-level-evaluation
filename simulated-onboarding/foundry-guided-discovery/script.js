@@ -120,48 +120,240 @@ const taskDefinitions = [
 ];
 
 const plannedSecurityPath = {
+  id: "security",
+  theme: "Secure AI solutions",
   title: "Secure Microsoft Foundry solutions",
   description:
     "Build security skills from foundational AI workload risks through Foundry guardrails, environment hardening, threat response, data governance, and enterprise architecture.",
   modules: [
     {
       level: "L100",
+      certification: "AI-103",
       title: "Understand AI workload risks and protection in Azure",
       description:
         "Identify the security risks that exist in AI systems and the protections available in Azure.",
     },
     {
       level: "L200",
+      certification: "AI-103",
       title: "Configure content safety and guardrails in Microsoft Foundry",
       description:
         "Understand why guardrails are needed, then configure controls to protect model inputs and outputs.",
     },
     {
       level: "L300",
+      certification: "AI-300",
       title: "Secure Microsoft Foundry environments",
       description:
         "Harden a Microsoft Foundry environment by applying appropriate platform security controls.",
     },
     {
       level: "L300",
+      certification: "SC-500",
       title: "Protect and investigate AI workloads with Defender for Cloud",
       description:
         "Detect, investigate, and respond to threats against AI workloads with Microsoft Defender for Cloud.",
     },
     {
       level: "L300",
+      certification: "SC-500",
       title: "Govern data in developer AI apps with Microsoft Purview",
       description:
         "Protect and govern sensitive data used by developer AI applications and agents with Microsoft Purview.",
     },
     {
       level: "L400",
+      certification: "AI-500",
       title: "Design security architecture for enterprise AI platforms and agents",
       description:
         "Design how identity, networking, policy, data, deployment controls, and trust boundaries fit together.",
     },
   ],
 };
+
+const plannedGovernancePath = {
+  id: "governance",
+  theme: "Govern AI solutions",
+  title: "Govern Microsoft Foundry solutions",
+  description:
+    "Build governance skills from foundational concepts and platform controls to enterprise policy, responsible AI, compliance, and agent lifecycle governance.",
+  modules: [
+    {
+      level: "L100",
+      certification: "AI-103",
+      title: "Understand governance for AI workloads in Microsoft Foundry",
+      description:
+        "Recognize why AI workloads require governance and identify foundational policy, risk, compliance, and accountability concepts.",
+    },
+    {
+      level: "L200",
+      certification: "AI-300",
+      title: "Apply governance controls to Microsoft Foundry workloads",
+      description:
+        "Configure platform controls and governed release practices for individual AI applications and workloads.",
+    },
+    {
+      level: "L400",
+      certification: "AI-500",
+      title: "Design governance architecture for enterprise AI platforms",
+      description:
+        "Design policy, identity, networking, data, deployment, and compliance boundaries for enterprise AI platforms.",
+    },
+    {
+      level: "L400",
+      certification: "AI-500",
+      title: "Scale responsible AI governance in Microsoft Foundry",
+      description:
+        "Design scalable responsible AI governance with content safety, evaluation, oversight, and organization-wide controls.",
+    },
+    {
+      level: "L400",
+      certification: "AI-500",
+      title: "Govern data across enterprise AI applications and agents",
+      description:
+        "Design data protection, lifecycle, access, and compliance controls across AI applications, agents, and shared knowledge sources, with Microsoft Purview cross-references.",
+    },
+    {
+      level: "L400",
+      certification: "AI-500",
+      title: "Govern the enterprise agent lifecycle in Microsoft Foundry",
+      description:
+        "Establish governance for agent design, approval, deployment, monitoring, change, and retirement across the enterprise.",
+    },
+  ],
+};
+
+const plannedEvaluationPath = {
+  id: "evaluation",
+  theme: "Evaluate AI systems",
+  title: "Evaluate and operationalize generative AI systems",
+  description:
+    "Build evaluation skills from foundational concepts through GenAIOps practices and advanced multi-agent orchestration, with modules spanning AI-103, AI-300, and AI-500.",
+  modules: [
+    {
+      level: "L200",
+      certification: "AI-103",
+      title: "Understand evaluation for generative AI apps and agents",
+      description:
+        "Explain why evaluation is needed, distinguish common quality, safety, groundedness, and agent metrics, and run a basic evaluation in Microsoft Foundry.",
+    },
+    {
+      level: "L200",
+      certification: "AI-103",
+      title: "Monitor generative AI apps and agents",
+      description:
+        "Integrate monitoring into a deployed app or agent, then interpret traces, token usage, safety signals, latency, drift, and errors in Microsoft Foundry.",
+    },
+    {
+      level: "L300",
+      certification: "AI-300",
+      title: "Design an evaluation strategy",
+      description:
+        "Convert requirements into assertions, create representative test datasets, select quality, safety, RAG, and agent metrics, and define human and automated evaluation roles. Lab: Create an evaluation specification and test suite for an agent.",
+    },
+    {
+      level: "L400",
+      certification: "AI-300",
+      title: "Build and calibrate evaluation pipelines",
+      description:
+        "Configure built-in and custom evaluators, implement human evaluation and LLM-as-judge, calibrate automated judges, and add quality gates to CI/CD. Lab: Calibrate an evaluator and block a failing release.",
+    },
+    {
+      level: "L400",
+      certification: "AI-300",
+      title: "Evaluate and optimize GenAI apps and agents",
+      description:
+        "Diagnose prompt, retrieval, grounding, tool-use, and orchestration failures; compare complete agent trajectories; and optimize quality, latency, and cost. Lab: Compare two agent versions and implement an improvement.",
+    },
+    {
+      level: "L300",
+      certification: "AI-300",
+      title: "Monitor and observe production GenAI systems",
+      description:
+        "Implement continuous monitoring, detailed logging, tracing, debugging, alerts, and drift detection, then feed production signals back into evaluation datasets and regression tests. Lab: Trace a production failure and add a regression test.",
+    },
+    {
+      level: "L400",
+      certification: "AI-500",
+      title: "Design an evaluation strategy for multi-agent orchestration",
+      description:
+        "Define system-level success criteria, per-agent responsibilities, coordination metrics, failure taxonomies, and representative multi-agent test scenarios.",
+    },
+    {
+      level: "L400",
+      certification: "AI-500",
+      title: "Evaluate multi-agent trajectories, tools, and coordination",
+      description:
+        "Assess agent handoffs, routing, tool use, shared context, memory, loops, recovery behavior, and complete workflow trajectories.",
+    },
+    {
+      level: "L400",
+      certification: "AI-500",
+      title: "Monitor and improve production multi-agent systems",
+      description:
+        "Correlate traces across agents and services, monitor agent health, coordination, availability, quality regression, and cost, and design remediation for recurring failure patterns.",
+    },
+  ],
+};
+
+const plannedCostEfficiencyPath = {
+  id: "cost-efficiency",
+  theme: "Optimize AI investments",
+  title: "Maximize the Cost Efficiency of AI Agents on Azure",
+  description:
+    "Maximize the ROI of AI agent investments by identifying high-impact use cases, understanding cost drivers, forecasting returns, selecting efficient development approaches, designing scalable architectures, and optimizing ongoing investments.",
+  modules: [
+    {
+      level: "L300",
+      title: "Identify and Prioritize High-Impact AI Agent Use Cases",
+      description:
+        "Research potential applications, define business needs and measurable KPIs, assess feasibility, and prioritize quick wins with strong potential value.",
+    },
+    {
+      level: "L100",
+      title: "Understand the key cost drivers of AI agents",
+      description:
+        "Identify infrastructure, licensing, development, integration, data preparation, staffing, and ongoing operational costs for AI agents.",
+    },
+    {
+      level: "L400",
+      title: "Forecast the return on investment (ROI) of AI agents",
+      description:
+        "Quantify financial and strategic value with ROI and net present value, apply sensitivity analysis, prioritize investments, and build a business case.",
+    },
+    {
+      level: "L300",
+      title: "Implement best practices to empower AI agent efficiency and ensure long-term success",
+      description:
+        "Apply relevant practices from AI Centers of Excellence, FinOps, GenAIOps, the Cloud Adoption Framework, and the Well-Architected Framework.",
+    },
+    {
+      level: "L400",
+      title: "Maximize cost efficiency by choosing the right AI agent development approach on Azure",
+      description:
+        "Evaluate hosting, customization, time-to-value, complexity, and operational-cost tradeoffs to choose between prebuilt, low-code, and pro-code approaches.",
+    },
+    {
+      level: "L400",
+      title: "Architect scalable and cost-efficient AI agent solutions on Azure",
+      description:
+        "Evaluate reference architectures and orchestration patterns, then design scalable single-agent and multi-agent solutions aligned with financial goals.",
+    },
+    {
+      level: "L300",
+      title: "Manage and optimize AI agent investments on Azure",
+      description:
+        "Monitor agent usage and performance, create budgets, quotas, and alerts, detect anomalies, and optimize ongoing spending.",
+    },
+  ],
+};
+
+const plannedPaths = [
+  plannedSecurityPath,
+  plannedGovernancePath,
+  plannedEvaluationPath,
+  plannedCostEfficiencyPath,
+];
 
 function parseCsv(text) {
   const rows = [];
@@ -239,18 +431,20 @@ function renderThemes(themes, type) {
   });
 }
 
-function renderPlannedPath() {
+function renderPlannedPath(path) {
   const fragment = plannedPathTemplate.content.cloneNode(true);
   const sequence = fragment.querySelector(".module-sequence");
-  fragment.querySelector("h2").textContent = plannedSecurityPath.title;
+  fragment.querySelector("h2").textContent = path.title;
   fragment.querySelector(".planned-path-heading p").textContent =
-    plannedSecurityPath.description;
+    path.description;
   fragment.querySelector(".planned-module-count").textContent =
-    `${plannedSecurityPath.modules.length} planned modules`;
+    `${path.modules.length} planned modules`;
 
-  plannedSecurityPath.modules.forEach((module) => {
+  path.modules.forEach((module) => {
     const moduleFragment = moduleTemplate.content.cloneNode(true);
     moduleFragment.querySelector(".module-level").textContent = module.level;
+    moduleFragment.querySelector(".module-cert").textContent =
+      module.certification || "No cert";
     moduleFragment.querySelector("h3").textContent = module.title;
     moduleFragment.querySelector("p").textContent = module.description;
     sequence.append(moduleFragment);
@@ -260,20 +454,42 @@ function renderPlannedPath() {
 }
 
 function renderPlannedOverview() {
-  const themeFragment = themeTemplate.content.cloneNode(true);
-  const grid = themeFragment.querySelector(".path-grid");
-  const cardFragment = plannedCardTemplate.content.cloneNode(true);
+  const themes = new Map();
+  plannedPaths.forEach((path) => {
+    if (!themes.has(path.theme)) themes.set(path.theme, []);
+    themes.get(path.theme).push(path);
+  });
 
-  themeFragment.querySelector("h2").textContent = "Secure AI solutions";
-  themeFragment.querySelector(".theme-heading p").textContent =
-    "Preview a rationalized security path designed to replace overlapping Foundry content.";
-  cardFragment.querySelector(".planned-path-card").dataset.openPlannedPath = "";
-  cardFragment.querySelector("strong").textContent = plannedSecurityPath.title;
-  cardFragment.querySelector("em").textContent =
-    `${plannedSecurityPath.modules.length} modules · L100-L400`;
-  cardFragment.querySelector("small").textContent = plannedSecurityPath.description;
-  grid.append(cardFragment);
-  themeList.replaceChildren(themeFragment);
+  const fragments = [...themes.entries()].map(([theme, paths]) => {
+    const themeFragment = themeTemplate.content.cloneNode(true);
+    const grid = themeFragment.querySelector(".path-grid");
+
+    themeFragment.querySelector("h2").textContent = theme;
+    themeFragment.querySelector(".theme-heading p").textContent =
+      `Preview the proposed ${theme.toLowerCase()} portfolio.`;
+
+    paths.forEach((path) => {
+      const cardFragment = plannedCardTemplate.content.cloneNode(true);
+      const levels = path.modules
+        .map((module) => Number(module.level.slice(1)))
+        .sort((first, second) => first - second);
+      const levelRange =
+        levels[0] === levels.at(-1)
+          ? `L${levels[0]}`
+          : `L${levels[0]}-L${levels.at(-1)}`;
+
+      cardFragment.querySelector(".planned-path-card").dataset.openPlannedPath = path.id;
+      cardFragment.querySelector("strong").textContent = path.title;
+      cardFragment.querySelector("em").textContent =
+        `${path.modules.length} ${path.modules.length === 1 ? "module" : "modules"} · ${levelRange}`;
+      cardFragment.querySelector("small").textContent = path.description;
+      grid.append(cardFragment);
+    });
+
+    return themeFragment;
+  });
+
+  themeList.replaceChildren(...fragments);
 }
 
 function setPortfolioView(view) {
@@ -373,8 +589,12 @@ portfolioToggle.addEventListener("click", (event) => {
 });
 
 themeList.addEventListener("click", (event) => {
-  if (event.target.closest("[data-open-planned-path]")) {
-    renderPlannedPath();
+  const plannedPathCard = event.target.closest("[data-open-planned-path]");
+  if (plannedPathCard) {
+    const path = plannedPaths.find(
+      (candidate) => candidate.id === plannedPathCard.dataset.openPlannedPath,
+    );
+    renderPlannedPath(path);
     return;
   }
 

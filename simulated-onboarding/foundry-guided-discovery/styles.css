@@ -195,16 +195,32 @@
   box-shadow: var(--shadow-card);
 }
 
-.module-level {
+.module-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 7px;
+}
+
+.module-level,
+.module-cert {
   min-width: 54px;
   height: fit-content;
   padding: 4px 8px;
-  color: var(--brand-hover);
   font-size: 13px;
   font-weight: 700;
   text-align: center;
-  background: var(--brand-tint);
   border-radius: 999px;
+}
+
+.module-level {
+  color: var(--brand-hover);
+  background: var(--brand-tint);
+}
+
+.module-cert {
+  color: var(--text-secondary);
+  background: var(--surface-muted);
 }
 
 .module-card h3 {
