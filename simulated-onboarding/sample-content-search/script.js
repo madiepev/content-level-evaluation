@@ -1,6 +1,62 @@
 const DATA_URL = "../../content-data/AI_ML_Representative_Sample_100.csv";
 const PAGE_SIZE = 12;
 const LEVEL_ORDER = ["Beginner", "Intermediate", "Proficient", "Advanced", "Expert"];
+const ROLE_ORDER = [
+  "Executive",
+  "Developer",
+  "IT professional",
+  "Data professional",
+  "Security professional",
+  "Sales",
+  "Marketing",
+  "Customer service",
+  "Faculty",
+  "Student",
+];
+const CREDENTIAL_RULES = [
+  {
+    name: "SC-401: Microsoft Information Security Administrator",
+    pattern: /\bsc-401\b/i,
+  },
+  {
+    name: "MS-102: Microsoft 365 Administrator",
+    pattern: /\bms-102\b/i,
+  },
+  {
+    name: "Certified Kubernetes Administrator (CKA)",
+    pattern: /certified kubernetes administrator|\bcka\b/i,
+  },
+];
+const ROLE_RULES = [
+  { name: "Faculty", pattern: /classroom|teacher|instructional coach|faculty|educator/i },
+  { name: "Student", pattern: /\bstudent|learner/i },
+  { name: "Marketing", pattern: /marketing/i },
+  {
+    name: "Customer service",
+    pattern: /customer service|customer success|contact cent(?:er|re)|dragon medical|dax consultant|nuance/i,
+  },
+  { name: "Sales", pattern: /\bsales|presales|account planning|opportunity management/i },
+  {
+    name: "Security professional",
+    pattern: /security|defender|purview|identity|vulnerabilit|compliance|threat/i,
+  },
+  {
+    name: "Data professional",
+    pattern: /machine learning|data science|data engineer|data pipeline|analytics|data storage|\brag\b/i,
+  },
+  {
+    name: "Developer",
+    pattern: /developer|development|\.net|programming|\bapi\b|source code|application development/i,
+  },
+  {
+    name: "IT professional",
+    pattern: /administrator|architecture|architect|infrastructure|cloud|storage|kubernetes|operations|migration/i,
+  },
+  {
+    name: "Executive",
+    pattern: /executive|leader|leadership|strategy|business transformation|manager/i,
+  },
+];
 
 const form = document.querySelector("#search-form");
 const searchInput = document.querySelector("#search-input");
@@ -83,6 +139,32 @@ function displayDuration(record) {
   return `${hours.toFixed(hours % 1 === 0 ? 0 : 1)}h`;
 }
 
+function recordText(record) {
+  return [
+    record["Course[Course Title]"],
+    record["Course[Description]"],
+    record.Product,
+    record.Skill,
+    record.Skilling,
+    record.Sub_Category,
+  ].join(" ");
+}
+
+function credentialFor(record) {
+  const text = recordText(record);
+  return CREDENTIAL_RULES.find((rule) => rule.pattern.test(text))?.name ?? "No credential";
+}
+
+function rolesFor(record) {
+  const text = recordText(record);
+  const roles = ROLE_RULES.filter((rule) => rule.pattern.test(text)).map((rule) => rule.name);
+  return roles.length ? roles : ["IT professional"];
+}
+
+function formatFor(record) {
+  return record["Course[Modality]"] === "LearningPath" ? "Learning path" : "Course";
+}
+
 function addOptions(selectId, values, preferredOrder = []) {
   const select = document.querySelector(selectId);
   const sortedValues = [...new Set(values.filter(Boolean))].sort((first, second) => {
@@ -103,54 +185,46 @@ function addOptions(selectId, values, preferredOrder = []) {
 }
 
 function populateFilters() {
-  addOptions("#skill-filter", records.map((record) => record.Skill));
-  addOptions("#format-filter", records.map((record) => record["Course[Modality]"]));
+  addOptions("#credential-filter", records.map(credentialFor), ["No credential"]);
+  addOptions("#format-filter", records.map(formatFor));
   addOptions("#level-filter", records.map((record) => record.Content_Level), LEVEL_ORDER);
-  addOptions(
-    "#organization-filter",
-    records.map((record) => record["Course[Hosted Training Organization]"] || "Not specified"),
-  );
+  addOptions("#role-filter", records.flatMap(rolesFor), ROLE_ORDER);
 }
 
 function matchesRecord(record, query, selectedFilters) {
-  const searchableText = normalized(
-    [
-      record["Course[Course Title]"],
-      record["Course[Description]"],
-      record.Product,
-      record.Skill,
-      record.Skilling,
-      record.Sub_Category,
-      record["Course[Hosted Training Organization]"],
-    ].join(" "),
-  );
+  const searchableText = normalized(recordText(record));
 
   const recordValues = {
-    skill: record.Skill,
-    format: record["Course[Modality]"],
+    credential: credentialFor(record),
+    format: formatFor(record),
     level: record.Content_Level,
+    role: rolesFor(record),
     duration: durationBucket(record),
-    organization: record["Course[Hosted Training Organization]"] || "Not specified",
   };
 
   return (
     (!query || searchableText.includes(query)) &&
-    selectedFilters.every(([name, value]) => !value || recordValues[name] === value)
+    selectedFilters.every(
+      ([name, value]) =>
+        !value ||
+        (Array.isArray(recordValues[name])
+          ? recordValues[name].includes(value)
+          : recordValues[name] === value),
+    )
   );
 }
 
 function createCard(record) {
   const card = cardTemplate.content.firstElementChild.cloneNode(true);
   const title = record["Course[Course Title]"];
-  const organization = record["Course[Hosted Training Organization]"] || "Organization not specified";
 
-  card.querySelector(".format").textContent = record["Course[Modality]"];
+  card.querySelector(".format").textContent = formatFor(record);
   card.querySelector(".duration").textContent = displayDuration(record);
   card.querySelector(".level").textContent = `${record.Skill_Level}: ${record.Content_Level}`;
   card.querySelector("h3").textContent = title;
   card.querySelector("p").textContent = record["Course[Description]"];
   card.querySelector(".skill-tag").textContent = record.Skill;
-  card.querySelector(".organization-tag").textContent = organization;
+  card.querySelector(".credential-tag").textContent = credentialFor(record);
 
   const link = card.querySelector("a");
   link.href = record["Course[Url]"];
