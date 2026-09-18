@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A conversational prototype for an agentic skilling platform."
+    />
+    <title>Skills Navigator</title>
+    <link rel="stylesheet" href="../shared-theme.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conversation">Skip to conversation</a>
+
+    <header class="app-header">
+      <a class="brand" href="#" aria-label="Skills Navigator home">
+        <span>Skills Navigator</span>
+      </a>
+      <button id="restart-button" class="restart-button" type="button">Restart</button>
+    </header>
+
+    <main id="conversation" class="conversation" aria-labelledby="page-title">
+      <section id="messages" class="messages" aria-label="Conversation" aria-live="polite">
+        <article class="assistant-message">
+          <div class="assistant-identity">
+            <div>
+              <strong>Skilling playlist builder</strong>
+            </div>
+          </div>
+          <div class="message-content">
+            <h1 id="page-title">Get to the right learning, faster.</h1>
+            <p>
+              Choose what you want to achieve. I’ll surface a focused path from the most
+              relevant learning content.
+            </p>
+            <h2>What do you want to do?</h2>
+            <div class="path-choices" aria-label="Learning paths">
+              <button type="button" data-path="foundation">
+                <strong>Build foundational knowledge</strong>
+                <span>Get started with beginner to intermediate content that builds essential concepts and strengthens your understanding.</span>
+              </button>
+              <button type="button" data-path="task">
+                <strong>Apply your knowledge</strong>
+                <span>Use proficient to expert content to apply what you know and complete a specific task.</span>
+              </button>
+              <button type="button" data-path="credential">
+                <strong>Prepare for a credential</strong>
+                <span>Explore learning aligned to certifications and credentials.</span>
+                <small>Opens the credentials page</small>
+              </button>
+            </div>
+            <p class="path-guidance">
+              Not sure where to start? Choose <strong>“Apply your knowledge.”</strong>
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <div class="composer-shell">
+      <div id="refinement-progress" class="refinement-progress" hidden>
+        <p id="progress-message" class="progress-message">
+          Let’s get your playlist started.
+        </p>
+        <div
+          id="progress-track"
+          class="progress-track"
+          role="progressbar"
+          aria-labelledby="progress-label"
+          aria-describedby="progress-message"
+          aria-valuemin="1"
+          aria-valuemax="4"
+          aria-valuenow="1"
+        >
+          <span id="progress-fill" class="progress-fill"></span>
+        </div>
+        <div class="progress-heading">
+          <span id="progress-label">Question 1 of 4</span>
+        </div>
+      </div>
+      <div id="suggestions" class="suggestions" aria-label="Suggested replies"></div>
+      <button id="show-now-button" class="show-now-button" type="button" hidden>
+        Get started now
+      </button>
+      <span id="show-now-note" class="show-now-note" hidden>
+        See three options, each 30 minutes or less.
+      </span>
+
+      <form id="composer" class="composer" aria-label="Send a message">
+        <label class="sr-only" for="message-input">Message Skilling playlist builder</label>
+        <textarea
+          id="message-input"
+          rows="2"
+          placeholder="Describe a topic, goal, or task..."
+        ></textarea>
+        <button id="send-button" class="send-button" type="submit">Send</button>
+      </form>
+      <p class="composer-note">This prototype uses simulated responses.</p>
+    </div>
+
+    <template id="user-message-template">
+      <article class="user-message-row">
+        <div class="user-message"></div>
+      </article>
+    </template>
+
+    <template id="assistant-message-template">
+      <article class="assistant-message">
+        <div class="assistant-identity">
+          <div>
+            <strong>Skilling playlist builder</strong>
+          </div>
+        </div>
+        <div class="message-content"></div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>

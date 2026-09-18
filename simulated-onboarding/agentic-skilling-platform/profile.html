@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Saved learning playlists in the Skills Navigator prototype."
+    />
+    <title>My learning profile</title>
+    <link rel="stylesheet" href="../shared-theme.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#profile-content">Skip to saved playlists</a>
+
+    <header class="app-header">
+      <a class="brand" href="index.html">Skills Navigator</a>
+      <a class="profile-back-link" href="index.html">Find more learning</a>
+    </header>
+
+    <main id="profile-content" class="profile-main">
+      <div class="profile-heading">
+        <h1>My learning profile</h1>
+        <p>Your saved playlists and interests appear here.</p>
+      </div>
+
+      <section class="profile-interests" aria-labelledby="profile-interests-heading">
+        <h2 id="profile-interests-heading">Your interests</h2>
+        <p>These preferences help personalize future learning recommendations.</p>
+        <div id="profile-interests-list" class="profile-interest-groups"></div>
+      </section>
+
+      <div id="saved-playlists" class="saved-playlists"></div>
+    </main>
+
+    <template id="saved-playlist-template">
+      <article class="saved-playlist">
+        <h2></h2>
+        <p class="saved-playlist-meta"></p>
+        <div class="result-table-shell">
+          <table class="result-table">
+            <caption class="sr-only">Saved playlist content</caption>
+            <thead>
+              <tr>
+                <th scope="col">Learning option</th>
+                <th scope="col">Details</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </article>
+    </template>
+
+    <script src="profile.js"></script>
+  </body>
+</html>

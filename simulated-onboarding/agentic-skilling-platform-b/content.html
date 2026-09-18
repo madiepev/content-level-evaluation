@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learning content details in the Skills Navigator prototype."
+    />
+    <title>Learning details — Skills Navigator</title>
+    <link rel="stylesheet" href="../shared-theme.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content-detail">Skip to learning details</a>
+
+    <header class="app-header">
+      <a class="brand" href="index.html">
+        Skills Navigator
+        <span class="version-label">Version B</span>
+      </a>
+      <a class="profile-back-link" href="profile.html">My playlists</a>
+    </header>
+
+    <main id="content-detail" class="content-detail-main">
+      <nav class="content-breadcrumb" aria-label="Breadcrumb">
+        <a href="profile.html">My playlists</a>
+        <span aria-hidden="true">/</span>
+        <span>Learning details</span>
+      </nav>
+
+      <article id="content-detail-view" hidden>
+        <header class="content-hero">
+          <p id="content-type" class="content-eyebrow"></p>
+          <h1 id="content-title"></h1>
+          <p id="content-description" class="content-description"></p>
+          <ul class="content-facts" aria-label="Learning content details">
+            <li id="content-duration"></li>
+            <li id="content-level"></li>
+          </ul>
+          <a
+            id="content-start-link"
+            class="content-primary-action"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Start learning
+            <span aria-hidden="true">→</span>
+          </a>
+        </header>
+
+        <div class="content-primary-sections">
+          <section aria-labelledby="prerequisites-heading">
+            <h2 id="prerequisites-heading">Prerequisites</h2>
+            <ul id="content-prerequisites"></ul>
+          </section>
+
+          <section aria-labelledby="objectives-heading">
+            <h2 id="objectives-heading">Learning objectives</h2>
+            <p>By the end of this content, you’ll be able to:</p>
+            <ul id="content-objectives"></ul>
+          </section>
+        </div>
+
+        <section class="content-taxonomy" aria-labelledby="content-fit-heading">
+          <div>
+            <p class="content-section-label">Related categories</p>
+            <h2 id="content-fit-heading">Where this learning fits</h2>
+            <p>Use these categories to connect this content to your role and skill goals.</p>
+          </div>
+          <div class="content-taxonomy-group">
+            <h3>Roles</h3>
+            <div id="content-roles" class="content-tags"></div>
+          </div>
+          <div class="content-taxonomy-group">
+            <h3>Skills</h3>
+            <div id="content-skills" class="content-tags"></div>
+          </div>
+        </section>
+      </article>
+
+      <section id="content-empty-state" class="content-empty-state" hidden>
+        <h1>Choose content from a playlist</h1>
+        <p>Open a saved playlist to choose learning content.</p>
+        <a class="content-primary-action" href="profile.html">View my playlists</a>
+      </section>
+    </main>
+
+    <script src="content.js"></script>
+  </body>
+</html>
